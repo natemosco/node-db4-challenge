@@ -3,12 +3,12 @@
 module.exports = {
   development: {
     client: "sqlite3",
-    useNullAsDefault: true,
     connection: {
       filename: ".data/recipes.db3"
     },
+    useNullAsDefault: true,
     migrations: {
-      directory: ".data/migrations"
+      directory: "./data/migrations"
     },
     pool: {
       afterCreate: (conn, done) => {
